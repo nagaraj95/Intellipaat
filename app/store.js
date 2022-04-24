@@ -12,7 +12,7 @@ import searchReducer from "./reducers/searchReducer";
 const persistConfig = {
   key: "root",
   storage: AsyncStorage,
-  whitelist: ["token"],
+  whitelist: [],
 };
 
 const rootReducer = combineReducers({
