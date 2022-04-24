@@ -23,22 +23,22 @@ class home extends Component {
     var items = JSON.parse(item)
     return (
       <View style={styles.listContainer}>
-        <View style={{ height: "60%" }}>
+        <View style={{ height: "55%" }}>
           <Image style={styles.courseImg} source={require('../assets/images/courseImage.jpeg')} />
           <View style={styles.freeBanner}>
-            <Text style={styles.freeText}>Free</Text>
+            <Text style={styles.freeText}>FREE</Text>
           </View>
         </View>
-        <View style={{ padding: 10 }}>
+        <View style={{ margin: 12 }}>
           <Text style={styles.postTitle}>{items.post_title}</Text>
-          <View style={{ marginTop: 5, flexDirection: 'row', }}>
+          <View style={{ marginTop: 10, flexDirection: 'row', }}>
             <View style={styles.ratingConatiner}>
               <Text style={{ color: colors.WHITE, marginRight: 3 }}>4.5</Text>
-              <Star height={15} width={15} fill={colors.WHITE} />
+              <Star height={12} width={12} fill={colors.WHITE} />
             </View>
-            <Text style={[styles.coCreated, { marginLeft: 5, alignSelf: 'center' }]}>32k+ Learners</Text>
+            <Text style={[styles.coCreated, { marginLeft: 5,alignSelf:'center'  }]}>32k+ Learners</Text>
           </View>
-          <Text style={styles.coCreated}>Co-created with IBM</Text>
+          <Text style={[styles.coCreated,{marginTop:10}]}>Co-created with IBM</Text>
         </View>
       </View>
     )
@@ -61,7 +61,9 @@ class home extends Component {
         <View style={{ backgroundColor: colors.WHITE }}>
           <View style={styles.inputContainer}>
             <TextInput placeholder={'Search your course here...'} placeholderTextColor={colors.BLACK} />
-            <Search fill={colors.BLACK} />
+            <View style={{marginRight:10}}>
+            <Search width={18} height={18} fill={colors.BLACK} />
+            </View>
           </View>
 
           <View style={{ padding: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -85,7 +87,7 @@ class home extends Component {
                     return (
                       <View
                         style={{
-                          marginRight: 10
+                          marginRight: 20
                         }}
                       />
                     );
@@ -120,13 +122,13 @@ export default connect(mapStateToProps, mapDispatchToProps)(home);
 const styles = StyleSheet.create({
   notfiDot:{ backgroundColor: 'red', width: 10, height: 10, borderRadius: 10 / 2 },
   header:{ marginTop: 15, marginRight: 15, marginLeft: 15, justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center' },
-  coCreated: { color: colors.BLACK, marginTop: 10, opacity: 0.6 },
-  ratingConatiner: { justifyContent: 'center', alignItems: 'center', flexDirection: 'row', width: '18%', padding: 3, borderRadius: 8, backgroundColor: colors.ORANGE },
-  postTitle: { color: colors.BLACK, fontSize: 16, fontWeight: 'bold' },
-  freeText: { color: colors.WHITE, textAlign: 'center', fontSize: 16 },
+  coCreated: { color: colors.BLACK, opacity: 0.6 },
+  ratingConatiner: { justifyContent: 'center', alignItems: 'center', flexDirection: 'row', width: '22%',height:25, borderRadius: 22, backgroundColor: colors.ORANGE },
+  postTitle: { color: colors.BLACK, fontSize: 15, fontWeight: 'bold' },
+  freeText: { color: colors.BLACK, textAlign: 'center', fontSize: 14,fontWeight:'bold' },
   freeBanner: { position: 'absolute', right: 0, top: 25, width: '18%', padding: 5, borderTopLeftRadius: 8, borderBottomLeftRadius: 8, backgroundColor: colors.YELLOW },
   courseImg: { width: "100%", height: "100%", borderRadius: 5 },
-  listContainer: { backgroundColor: colors.WHITE, width: 350, height: '75%', borderRadius: 5, borderColor: colors.WHITE, elevation: 3 },
+  listContainer: {marginBottom:30, backgroundColor: colors.WHITE, width: 315, height: '73%', borderRadius: 5, borderColor: colors.WHITE, elevation: 3 },
   headerText: {
     color: colors.WHITE,
     fontSize: 20,
@@ -135,9 +137,9 @@ const styles = StyleSheet.create({
   }, inputContainer: {
     margin: 10,
     borderRadius: 5,
-    opacity: 0.8,
-    borderWidth: 1,
-    borderColor: colors.BLACK, padding: 5, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'
+    borderColor: colors.BLACK, 
+    flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
+    backgroundColor:"#e1e3f0",opacity:0.7
   },
   freecourse: {
     fontSize: 18,

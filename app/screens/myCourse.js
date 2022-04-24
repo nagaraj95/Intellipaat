@@ -80,7 +80,9 @@ class myCourse extends Component {
             multiline={true}
             style={{ color: colors.BLACK }}
             onChangeText={(text) => this.searchFunc(text)} />
-          <Search fill={colors.BLACK} />
+          <View style={{ marginRight: 10 }}>
+            <Search width={18} height={18} fill={colors.BLACK} />
+          </View>
         </View>
         {
           this.state.showSearch ?
@@ -183,9 +185,8 @@ const styles = StyleSheet.create({
   inputContainer: {
     backgroundColor: colors.WHITE,
     margin: 10,
-    borderRadius: 7,
-    elevation: 3,
-    borderColor: colors.BLACK, padding: 3, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'
+    borderRadius: 4,
+    borderColor: colors.BLACK, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'
   },
   headerText: {
     color: colors.WHITE,
