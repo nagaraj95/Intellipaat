@@ -1,0 +1,13 @@
+export const GET_COURSE ='GET_COURSE'
+export const SET_COURSE ='SET_COURSE'
+export const LOAD_COURSE ='LOAD_COURSE'
+
+export const GET_MY_COURSE ='GET_MY_COURSE'
+export const SET_MY_COURSE ='SET_MY_COURSE'
+export const LOAD_MY_COURSE ='LOAD_MY_COURSE'
+
+
+export const SEARCH_COURSE = 'SEARCH_COURSE'
+export const SET_SEARCH_COURSE= 'SET_SEARCH_COURSE'
+export const LOAD_SEARCH ='LOAD_SEARCH'
+export const CLEAR_SEARCH = 'CLEAR_SEARCH'
