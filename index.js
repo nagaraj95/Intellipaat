@@ -14,7 +14,7 @@ import { PersistGate } from "redux-persist/integration/react";
 // console.disableYellowBox = true
 
 // // persisted store
- let persistor = persistStore(store);
+ let persistor = persistStore(store); 
 
 
 
