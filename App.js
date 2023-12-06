@@ -64,7 +64,7 @@ const App = () => {
         <Stack.Screen
           name="tabs"
           component={Bottomtabs}
-          options={{ gestureEnabled: false }}
+          options={{ gestureEnabled: false }} 
         />
       </Stack.Navigator>
     </NavigationContainer>
