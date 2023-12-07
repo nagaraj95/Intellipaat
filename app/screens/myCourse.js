@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { getMyCourse, searchCourse, clearSearchCourse } from '../actions/getCourse';
 import * as Progress from 'react-native-progress';
 
-class myCourse extends Component {
+class MyCourse extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -146,7 +146,7 @@ class myCourse extends Component {
 const mapStateToProps = (state) => {
 
 
-  var myCourseArr = [], searchArr = []
+  let myCourseArr = [], searchArr = []
   if (state.myCourse.data.length > 0) {
     myCourseArr = JSON.parse(state.myCourse ?.data ?.split('getMycourseshello')[1])
   }
@@ -175,7 +175,7 @@ const mapDispatchToProps = dispatch => {
 
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(myCourse);
+export default connect(mapStateToProps, mapDispatchToProps)(MyCourse);
 
 const styles = StyleSheet.create({
   myCourseContainer: { justifyContent: 'center', height: 70, backgroundColor: colors.HEADER },

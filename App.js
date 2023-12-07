@@ -1,9 +1,8 @@
 /* eslint-disable no-undef */
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, createNavigationContainerRef } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import axios from "axios";
-import { createNavigationContainerRef } from "@react-navigation/native";
 import { StatusBar } from 'react-native'
 
 export const navigationRef = createNavigationContainerRef();
@@ -64,7 +63,7 @@ const App = () => {
         <Stack.Screen
           name="tabs"
           component={Bottomtabs}
-          options={{ gestureEnabled: false }} 
+          options={{ gestureEnabled: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

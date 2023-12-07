@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { getCourse } from '../actions/getCourse';
 
 
-class home extends Component {
+class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +20,7 @@ class home extends Component {
   }
 
   renderitem = (item) => {
-    var items = JSON.parse(item)
+    let items = JSON.parse(item)
     return (
       <View style={styles.listContainer}>
         <View style={{ height: "55%" }}>
@@ -100,8 +100,8 @@ class home extends Component {
   }
 }
 const mapStateToProps = (state) => {
-  var object = state.freeCourse.data.data;
-  var dataArr = []
+  let object = state.freeCourse.data.data;
+  let dataArr = []
   for (const property in object) {
     dataArr.push(JSON.stringify(object[property].course_details))
   }
@@ -116,7 +116,7 @@ const mapDispatchToProps = dispatch => {
     getMyCourse: () => dispatch(getCourse())
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
 
 
 const styles = StyleSheet.create({

@@ -4,18 +4,11 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeI from "../assets/icons/home1.svg";
 import Profileicon from "../assets/icons/user.svg";
 import Course from '../assets/icons/course.svg';
-import {
-  Animated,
-  Platform,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-} from "react-native";
-
+import { Animated, Platform, StyleSheet, Text, TouchableOpacity } from "react-native";
 // screen imports
-import MyCourse from '../screens/myCourse'
-import Home from '../screens/home'
-import Profile from '../screens/profile'
+import MyCourse from '../screens/MyCourse'
+import Home from '../screens/Home'
+import Profile from '../screens/Profile'
 import colors from "../colors";
 
 
@@ -59,7 +52,7 @@ function MyTabBar({ state, descriptors, navigation }) {
         const isFocused = state.index === index;
 
         const onPress = () => {
-          
+
           const event = navigation.emit({
             type: "tabPress",
             target: route.key,
@@ -81,7 +74,7 @@ function MyTabBar({ state, descriptors, navigation }) {
             accessibilityState={isFocused ? { selected: true } : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
             testID={options.tabBarTestID}
-            onPress={()=>onPress()}
+            onPress={() => onPress()}
             style={styles.menubox}
           >
             {getIcon(index, iconSize, iconColor)}
@@ -98,31 +91,29 @@ function MyTabBar({ state, descriptors, navigation }) {
 const Bottomtabs = () => {
 
   return (
-    <>
-      <Tab.Navigator
-        screenOptions={{
-          headerShown: false,
-          tabBarHideOnKeyboard: true,
-        }}
-        tabBar={(props) => <MyTabBar {...props} />}
-      >
-        <Tab.Screen
-          name="home"
-          component={Home}
-          
-        />
-        <Tab.Screen
-          name="mycourse"
-          component={MyCourse}
-         
-        />
-        <Tab.Screen
-          name="profile"
-          component={Profile}
-          
-        />
-      </Tab.Navigator>
-    </>
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarHideOnKeyboard: true,
+      }}
+      tabBar={(props) => <MyTabBar {...props} />}
+    >
+      <Tab.Screen
+        name="home"
+        component={Home}
+
+      />
+      <Tab.Screen
+        name="mycourse"
+        component={MyCourse}
+
+      />
+      <Tab.Screen
+        name="profile"
+        component={Profile}
+
+      />
+    </Tab.Navigator>
   );
 };
 
@@ -151,7 +142,7 @@ const styles = StyleSheet.create({
   },
   menucontainer: {
     flexDirection: "row",
-    backgroundColor:"#fff",
+    backgroundColor: "#fff",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     height: 90,
