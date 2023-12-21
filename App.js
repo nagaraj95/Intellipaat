@@ -4,7 +4,7 @@ import { NavigationContainer, createNavigationContainerRef } from "@react-naviga
 import { createStackNavigator } from "@react-navigation/stack";
 import axios from "axios";
 import { StatusBar } from 'react-native'
-import CodePush, { CodePushOptions } from 'react-native-code-push'
+import CodePush from 'react-native-code-push'
 
 export const navigationRef = createNavigationContainerRef();
 
