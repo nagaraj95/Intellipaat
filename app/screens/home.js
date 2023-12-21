@@ -3,7 +3,6 @@ import { View, SafeAreaView, Text, StyleSheet, TextInput, FlatList, Image, Activ
 import colors from '../colors';
 import Search from '../assets/icons/search.svg';
 import Star from '../assets/icons/star.svg';
-// import Notification from '../assets/icons/notification.svg';
 import { connect } from 'react-redux';
 import { getCourse } from '../actions/getCourse';
 
