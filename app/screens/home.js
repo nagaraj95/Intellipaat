@@ -3,7 +3,7 @@ import { View, SafeAreaView, Text, StyleSheet, TextInput, FlatList, Image, Activ
 import colors from '../colors';
 import Search from '../assets/icons/search.svg';
 import Star from '../assets/icons/star.svg';
-import Notification from '../assets/icons/notification.svg';
+// import Notification from '../assets/icons/notification.svg';
 import { connect } from 'react-redux';
 import { getCourse } from '../actions/getCourse';
 
@@ -49,9 +49,9 @@ class Home extends Component {
       <SafeAreaView >
         <View style={{ height: 70, backgroundColor: colors.HEADER, }}>
           <View style={styles.header}>
-            <Text style={styles.headerText}>Intellipat</Text>
+            <Text style={styles.headerText}>Intellipat Change</Text>
             <View>
-              <Notification fill={"#fff"} height={25} width={25} />
+              {/* <Notification fill={"#fff"} height={25} width={25} /> */}
               <View style={{ position: 'absolute', right: 0, top: 5 }}>
                 <View style={styles.notfiDot} />
               </View>
@@ -60,7 +60,7 @@ class Home extends Component {
         </View>
         <View style={{ backgroundColor: colors.WHITE }}>
           <View style={styles.inputContainer}>
-            <TextInput placeholder={'Search your course here...'} placeholderTextColor={colors.BLACK} />
+            <TextInput placeholder={'Search course...'} placeholderTextColor={colors.BLACK} />
             <View style={{marginRight:10}}>
             <Search width={18} height={18} fill={colors.BLACK} />
             </View>

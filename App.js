@@ -4,6 +4,7 @@ import { NavigationContainer, createNavigationContainerRef } from "@react-naviga
 import { createStackNavigator } from "@react-navigation/stack";
 import axios from "axios";
 import { StatusBar } from 'react-native'
+import CodePush, { CodePushOptions } from 'react-native-code-push'
 
 export const navigationRef = createNavigationContainerRef();
 
@@ -70,4 +71,10 @@ const App = () => {
   );
 };
 
-export default App;
+const codePushOptions = {
+  checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
+  installMode: CodePush.InstallMode.IMMEDIATE,
+  updateDialog: CodePush.DEFAULT_UPDATE_DIALOG,
+}
+
+export default CodePush(codePushOptions)(App);

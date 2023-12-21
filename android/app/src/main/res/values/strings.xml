@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Intellipaat</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">s9R1lihe7eX9xRHpBNFo0ayqGIQLorHUUulHO</string>
 </resources>
